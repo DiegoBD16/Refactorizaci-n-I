@@ -10,6 +10,9 @@ class Vuelo:
         self.llegada = llegada
         self.precio = precio
 
+    def __str__(self):
+        return(f"Número de vuelo: {self.numero_vuelo}, Origen: {self.origen}, Destino: {self.destino}, Fecha: {self.fecha}, Hora de salida: {self.salida}, Hora de llegada: {self.llegada}, Precio: {self.precio}")
+
 class Pasajero:
     def __init__(self, nombre, apellido, edad, telefono, correo):
         self.nombre = nombre
@@ -27,7 +30,7 @@ class Informacion:
 def mostrar_vuelos_disponibles(vuelos):
     print("Vuelos disponibles:")
     for vuelo in vuelos:
-        print(f"Número de vuelo: {vuelo.numero_vuelo}, Origen: {vuelo.origen}, Destino: {vuelo.destino}, Fecha: {vuelo.fecha}, Hora de salida: {vuelo.salida}, Hora de llegada: {vuelo.llegada}, Precio: {vuelo.precio}")
+        print(vuelo)
 
 def reservar_vuelo(lista, numero_vuelo, pasajero, cantidad):
     
